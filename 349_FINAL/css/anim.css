@@ -1,0 +1,83 @@
+/* when defining the transition, only choose one property */
+/* Normally i would recommend using transform to affect your elements, but loco applies its transforms last. */
+/* so rotate and scle dont work well here */
+
+/* there are other ways to do this but would require more js */
+
+
+.slide-in-blurred-right {
+  -webkit-animation: slide-in-blurred-right 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+  animation: slide-in-blurred-right 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+}
+
+.invis {
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.invis.appear {
+  opacity: 1;
+}
+
+.small {
+  background-size: 100%;
+  transition: background-size 3s .3s;
+}
+
+.small.grow {
+  background-size: 140%;
+}
+
+/* blackbox scale up animation */
+
+@keyframes scale-up-center {
+  from {
+    opacity: 1;
+    translate: 0;
+  }
+
+  to {
+    opacity: 1;
+    translate: 0;
+    scale: 28;
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
+.scale-up-center {
+  animation: scale-up-center 2s cubic-bezier(0.785, 0.135, 0.150, 0.860) both;
+}
+
+@keyframes scale-down-center {
+  from {
+   transform: scale(1);
+  }
+
+  to {
+   transform: scale(0);
+  }
+}
+
+.scale-down-center {
+  -webkit-animation: scale-down-center 0.4s 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: scale-down-center 0.4s 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes fade-in-slide-left {
+  from {
+    opacity: 1;
+    transform: translateX(1em);
+    filter: blur(12);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0);
+  }
+}
+
+.fade-in-slide-left {
+  animation: fade-in-slide-left 2s ease;
+}

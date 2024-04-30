@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 2vmax;
+  line-height: 120%;
+  scroll-behavior: smooth;
+}
+
+
+
+body {
+  margin: 0;
+  background-image: url(/images/gradient.png);
+  background-attachment: cover;
+  background-repeat:repeat-x;
+  font-family: 'Nunito Sans';
+  width: 100%;
+  color: white
+  
+}
+
+.h1 {
+  color: black;
+  -webkit-text-stroke: 2px white;
+}
+
+.h1b {
+  color: rgb(116, 114, 114);
+  -webkit-text-stroke: 2px white;
+  font-size: 4vmax;
+}
+
+#main-nav {
+  /* background-color: black; */
+  position: fixed;
+  top: 1em;
+  left: 1em;
+  z-index: 999;
+  display: flex;
+  justify-content: space-around;
+  /* border: black solid; */
+  border-radius: 2em;
+  font-size: 22px;
+}
+
+#main-nav a:link {
+  padding: 0.5em;
+  /* background-color: black; */
+  text-align: center;
+  transition: all 0.1s;
+  flex-grow: 1;
+  text-decoration: none;
+  border-radius: 15px;
+}
+
+
+#main-nav a:visited {
+  border-radius: 15px;
+  text-align: center;
+  color: white
+}
+
+#main-nav a:hover {
+  background-color: white;
+  border-radius: 15px;
+  color: black;
+  flex-grow: 2;
+}
+
+#footer a:link {
+  padding: 0.5em;
+  font-size: 22px;
+  text-align: center;
+  transition: all 0.1s;
+  text-decoration: none;
+  color: rgb(116, 114, 114);
+}
+
+
+#footer a:visited {
+  color: rgb(116, 114, 114);
+  border-radius: 15px;
+  text-align: center;
+}
+
+#footer a:hover {
+  background-color: rgb(0, 0, 0);
+  border-radius: 15px;
+  color: white;
+} 
+.footer {
+  border-radius: 15px;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.sticker-container{
+    /* border: solid 1px #ff0000; */
+    display:flex; 
+    justify-content: flex-start;
+    align-items: baseline; 
+    width: 80%;
+    margin-top: 3em;
+
+  }
+
+  .stickme {
+    position: sticky;
+    top:3rem;
+    flex: 1;
+  }
+  
+  hgroup, article{
+    /* border: solid 1px #00bd2c;  */
+    width: 50%; 
+    padding: 1em;
+    
+  }
+
+  hgroup {
+    text-align: right;
+  }
+
+  /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+
+}
